@@ -1,0 +1,20 @@
+ng generate module products 
+ng generate component products/product-home --flat --skip-tests=true --module=products
+ng generate component products/product-details --flat --skip-tests=true --module=products
+ng generate component products/product-list --flat --skip-tests=true --module=products
+ng generate component products/product-create --flat --skip-tests=true --module=products
+ng generate component products/product-update --flat --skip-tests=true --module=products
+ng generate module categories
+ng generate component categories/category-home --flat --skip-tests=true --module=categories
+ng generate component categories/category-list --flat --skip-tests=true --module=categories
+ng generate component categories/category-details --flat --skip-tests=true --module=categories
+ng generate component categories/category-create --flat --skip-tests=true --module=categories
+ng generate component categories/category-update --flat --skip-tests=true --module=categories
+ng generate class shared/product-model 
+ng generate class shared/category-model 
+ng generate service services/product --skip-tests=true 
+ng generate service services/categories --skip-tests=true
+
+ng generate component ui/header --flat --skip-tests=true --module=app 
+ng generate component ui/footer --flat --skip-tests=true --module=app 
+ng generate component ui/main --flat --skip-tests=true --module=app

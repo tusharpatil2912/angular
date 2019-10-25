@@ -1,0 +1,26 @@
+<!--------------   Angular Component LIfe Cycle ------------->
+
+
+ngOnChanges(changes:SimpleChanges) 
+    -- called before ngOnOnit() and whenever a data bound input property changes 
+
+ngOnInit() 
+    -- Called once, after the first ngOnChanges 
+
+ngDoCheck()
+    -- Called during every change detection, runs immediately after ngOnChanges and ngOnInit
+
+ngAfterContentInit()
+    -- Called once after the first ngDoCheck, after content is projected into the directive
+
+ngAfterContentChecked()
+    -- Called after the ngAfterContentInit() and every subsequent ngDoCheck().
+
+ngAfterViewInit()
+    -- Called once after the first ngAfterContentChecked().
+
+ngAfterViewChecked() 
+    -- Called after the ngAfterViewInit() and every subsequent ngAfterContentChecked()
+    
+ngOnDestroy() 
+    -- Called just before Angular destroys the directive/component.
