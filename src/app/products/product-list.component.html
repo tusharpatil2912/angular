@@ -1,0 +1,13 @@
+<div class="alert alert-primary">
+<h1>Product List</h1>
+</div>
+<hr/>
+
+<div *ngFor="let item of productList" class="card shadow my-5">
+    <div class="card-body">
+        <p class="lead">{{item.productName}}</p>
+        <a [routerLink]="['/products','details',item.productId]"
+        class="btn btn-outline-success btn-lg">
+        More Info</a>
+    </div>
+</div>

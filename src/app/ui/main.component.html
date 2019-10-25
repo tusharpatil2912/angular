@@ -1,0 +1,31 @@
+<div class="jumbotron">
+        <h1>Hi. I am the Main component.</h1>
+        {{appTitle}}
+</div>
+
+<button (click)="changeData()">Change</button>
+
+<div class="card shadow w-75 ml-5">
+    <div class="card-header card-title text-light"
+    [ngClass]="productList==null ? 'bg-danger':'bg-primary'">
+        Choose Category:
+        <select name="selectCategory" (change)="changeCategory($event.target.value)">
+            <option value="0" selected>--Select Category--</option>
+            <option *ngFor="let item of categoryList" value={{item.categoryId}}>{{item.categoryName}}</option>
+        </select>
+    </div>
+    <div class="card-body">
+        <div *ngIf="!productList || !productList.length" class="text-danger">
+            No Matching items found
+        </div>
+        <div class="card-text">
+            <table class="table table-striped table-sm">
+                <tr><th>Product Name</th><th>Unit Price</th></tr>
+                <tr *ngFor="let item of productList">
+                    <td>{{item.productName | uppercase}}</td>
+                    <td>{{item.unitPrice | currency}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="alert alert-primary">
+<h1>Category Management</h1>
+</div>
+<hr/>
+
+<div class="card shadow m-3 border border-success">
+    <div class="card-header card- title bg-success">Categories Listing</div>
+    <div class="card-body card-text">
+        <p>A list of all categories is available. To view this list 
+            click
+            <a [routerLink]="['/categories/list']"
+            routerLinkActive="active"
+            class="nav-item nav-link">&rarr; Show List</a>
+        </p>
+    </div>
+</div>
+<div class="card shadow m-3 border border-warning">
+    <div class="card-header card- title bg-warning">Add New Category</div>
+    <div class="card-body card-text">
+        <p>This Section allows the addition of new categories into the store.
+            You can select =>
+            <a [routerLink]="['/categories/create']"
+            routerLinkActive="active"
+            class="nav-item nav-link">&diams; Create New</a>
+        </p>
+    </div>
+</div>
+

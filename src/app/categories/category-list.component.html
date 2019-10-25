@@ -1,0 +1,13 @@
+<div class="alert alert-primary">
+        <h1>Categories List</h1>
+        </div>
+        <hr/>
+        
+        <div *ngFor="let item of categoriesList" class="float-left card w-25 shadow my-2 mx-1">
+            <div class="card-body">
+                <p class="lead">{{item.categoryName}}</p>
+                <a [routerLink]="['/categories','details',item.categoryId]"
+                class="btn btn-outline-success btn-lg">
+                More Info</a>
+            </div>
+        </div>
